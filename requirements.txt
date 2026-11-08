@@ -1,0 +1,9 @@
+pandas
+numpy
+scikit-learn
+yfinance
+matplotlib
+requests
+# optional: vaderSentiment  (if installed it is used automatically;
+# otherwise the built-in finance lexicon scorer is used)
+# optional: python-dotenv   (a minimal .env loader is built into config.py)

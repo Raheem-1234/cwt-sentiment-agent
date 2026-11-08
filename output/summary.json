@@ -1,0 +1,121 @@
+{
+  "mode": {
+    "price": "real (yfinance)",
+    "news": "Google News RSS (Exa fallback \u2014 real headlines)",
+    "social": "DEMO fallback (seeded sample posts from headlines); StockTwits public API (real posts, ADR symbol)",
+    "model": "avg direction accuracy (OOS) = 0.514 across 10 tickers \u2014 per-ticker detail in summary.json"
+  },
+  "metrics_per_ticker": {
+    "0700.HK": {
+      "direction_accuracy_oos": 0.5368,
+      "direction_accuracy_std": 0.0842,
+      "naive_direction_accuracy": 0.5789,
+      "price_mae_oos": 8.7,
+      "naive_price_mae": 7.7,
+      "n_train_rows": 117,
+      "n_splits": 5,
+      "beats_naive_direction": false,
+      "beats_naive_price": false
+    },
+    "9988.HK": {
+      "direction_accuracy_oos": 0.4947,
+      "direction_accuracy_std": 0.0632,
+      "naive_direction_accuracy": 0.4105,
+      "price_mae_oos": 2.65,
+      "naive_price_mae": 2.34,
+      "n_train_rows": 117,
+      "n_splits": 5,
+      "beats_naive_direction": true,
+      "beats_naive_price": false
+    },
+    "3690.HK": {
+      "direction_accuracy_oos": 0.5789,
+      "direction_accuracy_std": 0.1104,
+      "naive_direction_accuracy": 0.4842,
+      "price_mae_oos": 2.12,
+      "naive_price_mae": 1.53,
+      "n_train_rows": 117,
+      "n_splits": 5,
+      "beats_naive_direction": true,
+      "beats_naive_price": false
+    },
+    "1810.HK": {
+      "direction_accuracy_oos": 0.4842,
+      "direction_accuracy_std": 0.0698,
+      "naive_direction_accuracy": 0.4526,
+      "price_mae_oos": 0.75,
+      "naive_price_mae": 0.68,
+      "n_train_rows": 117,
+      "n_splits": 5,
+      "beats_naive_direction": true,
+      "beats_naive_price": false
+    },
+    "2318.HK": {
+      "direction_accuracy_oos": 0.5053,
+      "direction_accuracy_std": 0.0714,
+      "naive_direction_accuracy": 0.5579,
+      "price_mae_oos": 0.67,
+      "naive_price_mae": 0.54,
+      "n_train_rows": 117,
+      "n_splits": 5,
+      "beats_naive_direction": false,
+      "beats_naive_price": false
+    },
+    "005930.KS": {
+      "direction_accuracy_oos": 0.4842,
+      "direction_accuracy_std": 0.0698,
+      "naive_direction_accuracy": 0.4842,
+      "price_mae_oos": 14825.66,
+      "naive_price_mae": 10892.63,
+      "n_train_rows": 114,
+      "n_splits": 5,
+      "beats_naive_direction": false,
+      "beats_naive_price": false
+    },
+    "000660.KS": {
+      "direction_accuracy_oos": 0.4316,
+      "direction_accuracy_std": 0.0394,
+      "naive_direction_accuracy": 0.4842,
+      "price_mae_oos": 112846.09,
+      "naive_price_mae": 89694.74,
+      "n_train_rows": 114,
+      "n_splits": 5,
+      "beats_naive_direction": false,
+      "beats_naive_price": false
+    },
+    "035420.KS": {
+      "direction_accuracy_oos": 0.5158,
+      "direction_accuracy_std": 0.0614,
+      "naive_direction_accuracy": 0.5053,
+      "price_mae_oos": 8449.9,
+      "naive_price_mae": 4894.74,
+      "n_train_rows": 114,
+      "n_splits": 5,
+      "beats_naive_direction": true,
+      "beats_naive_price": false
+    },
+    "035720.KS": {
+      "direction_accuracy_oos": 0.5158,
+      "direction_accuracy_std": 0.1348,
+      "naive_direction_accuracy": 0.4842,
+      "price_mae_oos": 696.0,
+      "naive_price_mae": 683.16,
+      "n_train_rows": 114,
+      "n_splits": 5,
+      "beats_naive_direction": true,
+      "beats_naive_price": false
+    },
+    "005380.KS": {
+      "direction_accuracy_oos": 0.5895,
+      "direction_accuracy_std": 0.171,
+      "naive_direction_accuracy": 0.4526,
+      "price_mae_oos": 11223.64,
+      "naive_price_mae": 10268.42,
+      "n_train_rows": 114,
+      "n_splits": 5,
+      "beats_naive_direction": true,
+      "beats_naive_price": false
+    }
+  },
+  "n_tickers": 10
+}

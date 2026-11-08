@@ -1,0 +1,56 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>CWT Sentiment Report</title>
+<style>body{font-family:Arial,sans-serif;max-width:1100px;margin:24px auto;padding:0 16px;color:#111827}
+table{border-collapse:collapse;width:100%;margin:12px 0}th,td{border:1px solid #d1d5db;padding:6px 8px;text-align:left;font-size:14px}
+th{background:#111827;color:#fff}.card{border:1px solid #d1d5db;border-radius:10px;padding:12px 16px;margin:10px 0}
+.charts img{max-width:49%}.src{color:#6b7280;font-size:12px}.note{background:#fef3c7;padding:10px 14px;border-radius:8px}</style></head>
+<body><h1>CrowdWisdomTrading — Sentiment Price Prediction Report</h1>
+<p>Assets sorted by social mentions, then sentiment score, per exchange. Prediction = price at n+1 (next trading day).</p>
+<div class="note"><b>Data mode:</b> Prices: real (yfinance) · News: Google News RSS (Exa fallback — real headlines) · Social: DEMO fallback (seeded sample posts from headlines); StockTwits public API (real posts, ADR symbol)<br>
+<b>Model validation (out-of-sample, TimeSeriesSplit ×5):</b> avg direction accuracy (OOS) = 0.514 across 10 tickers — per-ticker detail in summary.json</div>
+<h2>Hang Seng (HK)</h2><div class="charts"><img src="assets/sentiment_hk.svg"><img src="assets/mentions_hk.svg"></div>
+        <table><tr><th>Ticker</th><th>Asset</th><th>Price</th><th>Mentions</th><th>Sentiment</th>
+        <th>Direction</th><th>Position</th><th>Pred n+1</th><th>Support</th><th>Resistance</th></tr><tr><td>2318.HK</td><td>Ping An Insurance</td><td>53.15 HKD</td><td>40</td><td>+0.320 (Positive)</td><td><span style="background:#059669;color:#fff;padding:2px 8px;border-radius:10px">Up</span></td><td>Neutral</td><td>53.19</td><td>47.68</td><td>53.55</td></tr><tr><td>0700.HK</td><td>Tencent Holdings</td><td>419.80 HKD</td><td>40</td><td>+0.153 (Positive)</td><td><span style="background:#dc2626;color:#fff;padding:2px 8px;border-radius:10px">Down</span></td><td>Neutral</td><td>416.09</td><td>375.20</td><td>431.20</td></tr><tr><td>9988.HK</td><td>Alibaba Group</td><td>104.90 HKD</td><td>40</td><td>+0.110 (Neutral)</td><td><span style="background:#dc2626;color:#fff;padding:2px 8px;border-radius:10px">Down</span></td><td>Neutral</td><td>104.74</td><td>95.10</td><td>113.20</td></tr><tr><td>1810.HK</td><td>Xiaomi Corporation</td><td>30.38 HKD</td><td>40</td><td>+0.010 (Neutral)</td><td><span style="background:#dc2626;color:#fff;padding:2px 8px;border-radius:10px">Down</span></td><td>Neutral</td><td>30.09</td><td>23.78</td><td>31.74</td></tr><tr><td>3690.HK</td><td>Meituan</td><td>80.40 HKD</td><td>39</td><td>+0.046 (Neutral)</td><td><span style="background:#059669;color:#fff;padding:2px 8px;border-radius:10px">Up</span></td><td>Neutral</td><td>80.61</td><td>68.85</td><td>83.00</td></tr></table><div class="card"><h3>2318.HK — Ping An Insurance</h3>
+            <p>Price: <b>53.15 HKD</b> &nbsp;|&nbsp; Predicted n+1: <b>53.19</b> (+0.08%)</p>
+            <p>Sentiment: <b>+0.320</b> (Positive) · Mentions: 40 · News: 10 · Direction: <span style="background:#059669;color:#fff;padding:2px 8px;border-radius:10px">Up</span> · Position: <b>Neutral</b></p>
+            <p>Support: 47.68 · Pivot: 53.12 · Resistance: 53.55</p>
+            <p class="src">Sources — Social: StockTwits public API (real posts, ADR symbol) · News: Google News RSS (Exa fallback — real headlines) · Price: real (yfinance)</p></div><div class="card"><h3>0700.HK — Tencent Holdings</h3>
+            <p>Price: <b>419.80 HKD</b> &nbsp;|&nbsp; Predicted n+1: <b>416.09</b> (-0.88%)</p>
+            <p>Sentiment: <b>+0.153</b> (Positive) · Mentions: 40 · News: 10 · Direction: <span style="background:#dc2626;color:#fff;padding:2px 8px;border-radius:10px">Down</span> · Position: <b>Neutral</b></p>
+            <p>Support: 375.20 · Pivot: 421.53 · Resistance: 431.20</p>
+            <p class="src">Sources — Social: StockTwits public API (real posts, ADR symbol) · News: Google News RSS (Exa fallback — real headlines) · Price: real (yfinance)</p></div><div class="card"><h3>9988.HK — Alibaba Group</h3>
+            <p>Price: <b>104.90 HKD</b> &nbsp;|&nbsp; Predicted n+1: <b>104.74</b> (-0.15%)</p>
+            <p>Sentiment: <b>+0.110</b> (Neutral) · Mentions: 40 · News: 10 · Direction: <span style="background:#dc2626;color:#fff;padding:2px 8px;border-radius:10px">Down</span> · Position: <b>Neutral</b></p>
+            <p>Support: 95.10 · Pivot: 105.27 · Resistance: 113.20</p>
+            <p class="src">Sources — Social: StockTwits public API (real posts, ADR symbol) · News: Google News RSS (Exa fallback — real headlines) · Price: real (yfinance)</p></div><div class="card"><h3>1810.HK — Xiaomi Corporation</h3>
+            <p>Price: <b>30.38 HKD</b> &nbsp;|&nbsp; Predicted n+1: <b>30.09</b> (-0.95%)</p>
+            <p>Sentiment: <b>+0.010</b> (Neutral) · Mentions: 40 · News: 10 · Direction: <span style="background:#dc2626;color:#fff;padding:2px 8px;border-radius:10px">Down</span> · Position: <b>Neutral</b></p>
+            <p>Support: 23.78 · Pivot: 30.78 · Resistance: 31.74</p>
+            <p class="src">Sources — Social: StockTwits public API (real posts, ADR symbol) · News: Google News RSS (Exa fallback — real headlines) · Price: real (yfinance)</p></div><div class="card"><h3>3690.HK — Meituan</h3>
+            <p>Price: <b>80.40 HKD</b> &nbsp;|&nbsp; Predicted n+1: <b>80.61</b> (+0.27%)</p>
+            <p>Sentiment: <b>+0.046</b> (Neutral) · Mentions: 39 · News: 10 · Direction: <span style="background:#059669;color:#fff;padding:2px 8px;border-radius:10px">Up</span> · Position: <b>Neutral</b></p>
+            <p>Support: 68.85 · Pivot: 80.47 · Resistance: 83.00</p>
+            <p class="src">Sources — Social: StockTwits public API (real posts, ADR symbol) · News: Google News RSS (Exa fallback — real headlines) · Price: real (yfinance)</p></div><h2>KRX (Korea)</h2><div class="charts"><img src="assets/sentiment_kr.svg"><img src="assets/mentions_kr.svg"></div>
+        <table><tr><th>Ticker</th><th>Asset</th><th>Price</th><th>Mentions</th><th>Sentiment</th>
+        <th>Direction</th><th>Position</th><th>Pred n+1</th><th>Support</th><th>Resistance</th></tr><tr><td>005380.KS</td><td>Hyundai Motor</td><td>279,500.00 KRW</td><td>40</td><td>+0.192 (Positive)</td><td><span style="background:#dc2626;color:#fff;padding:2px 8px;border-radius:10px">Down</span></td><td>Neutral</td><td>277,324.10</td><td>267,500.00</td><td>334,000.00</td></tr><tr><td>005930.KS</td><td>Samsung Electronics</td><td>188,700.00 KRW</td><td>40</td><td>+0.114 (Neutral)</td><td><span style="background:#dc2626;color:#fff;padding:2px 8px;border-radius:10px">Down</span></td><td>Neutral</td><td>184,640.91</td><td>179,200.00</td><td>262,500.00</td></tr><tr><td>035720.KS</td><td>Kakao Corporation</td><td>32,300.00 KRW</td><td>38</td><td>+0.406 (Positive)</td><td><span style="background:#059669;color:#fff;padding:2px 8px;border-radius:10px">Up</span></td><td>Long</td><td>32,399.95</td><td>28,400.00</td><td>33,000.00</td></tr><tr><td>035420.KS</td><td>NAVER Corporation</td><td>190,200.00 KRW</td><td>38</td><td>+0.057 (Neutral)</td><td><span style="background:#059669;color:#fff;padding:2px 8px;border-radius:10px">Up</span></td><td>Long</td><td>193,151.44</td><td>166,000.00</td><td>193,700.00</td></tr><tr><td>000660.KS</td><td>SK Hynix</td><td>1,132,000.00 KRW</td><td>38</td><td>-0.040 (Neutral)</td><td><span style="background:#dc2626;color:#fff;padding:2px 8px;border-radius:10px">Down</span></td><td>Neutral</td><td>1,105,874.24</td><td>1,089,000.00</td><td>1,653,000.00</td></tr></table><div class="card"><h3>005380.KS — Hyundai Motor</h3>
+            <p>Price: <b>279,500.00 KRW</b> &nbsp;|&nbsp; Predicted n+1: <b>277,324.10</b> (-0.78%)</p>
+            <p>Sentiment: <b>+0.192</b> (Positive) · Mentions: 40 · News: 10 · Direction: <span style="background:#dc2626;color:#fff;padding:2px 8px;border-radius:10px">Down</span> · Position: <b>Neutral</b></p>
+            <p>Support: 267,500.00 · Pivot: 277,666.67 · Resistance: 334,000.00</p>
+            <p class="src">Sources — Social: StockTwits public API (real posts, ADR symbol) · News: Google News RSS (Exa fallback — real headlines) · Price: real (yfinance)</p></div><div class="card"><h3>005930.KS — Samsung Electronics</h3>
+            <p>Price: <b>188,700.00 KRW</b> &nbsp;|&nbsp; Predicted n+1: <b>184,640.91</b> (-2.15%)</p>
+            <p>Sentiment: <b>+0.114</b> (Neutral) · Mentions: 40 · News: 10 · Direction: <span style="background:#dc2626;color:#fff;padding:2px 8px;border-radius:10px">Down</span> · Position: <b>Neutral</b></p>
+            <p>Support: 179,200.00 · Pivot: 188,133.33 · Resistance: 262,500.00</p>
+            <p class="src">Sources — Social: StockTwits public API (real posts, ADR symbol) · News: Google News RSS (Exa fallback — real headlines) · Price: real (yfinance)</p></div><div class="card"><h3>035720.KS — Kakao Corporation</h3>
+            <p>Price: <b>32,300.00 KRW</b> &nbsp;|&nbsp; Predicted n+1: <b>32,399.95</b> (+0.31%)</p>
+            <p>Sentiment: <b>+0.406</b> (Positive) · Mentions: 38 · News: 10 · Direction: <span style="background:#059669;color:#fff;padding:2px 8px;border-radius:10px">Up</span> · Position: <b>Long</b></p>
+            <p>Support: 28,400.00 · Pivot: 31,933.33 · Resistance: 33,000.00</p>
+            <p class="src">Sources — Social: DEMO fallback (seeded sample posts from headlines) · News: Google News RSS (Exa fallback — real headlines) · Price: real (yfinance)</p></div><div class="card"><h3>035420.KS — NAVER Corporation</h3>
+            <p>Price: <b>190,200.00 KRW</b> &nbsp;|&nbsp; Predicted n+1: <b>193,151.44</b> (+1.55%)</p>
+            <p>Sentiment: <b>+0.057</b> (Neutral) · Mentions: 38 · News: 10 · Direction: <span style="background:#059669;color:#fff;padding:2px 8px;border-radius:10px">Up</span> · Position: <b>Long</b></p>
+            <p>Support: 166,000.00 · Pivot: 186,033.33 · Resistance: 193,700.00</p>
+            <p class="src">Sources — Social: DEMO fallback (seeded sample posts from headlines) · News: Google News RSS (Exa fallback — real headlines) · Price: real (yfinance)</p></div><div class="card"><h3>000660.KS — SK Hynix</h3>
+            <p>Price: <b>1,132,000.00 KRW</b> &nbsp;|&nbsp; Predicted n+1: <b>1,105,874.24</b> (-2.31%)</p>
+            <p>Sentiment: <b>-0.040</b> (Neutral) · Mentions: 38 · News: 10 · Direction: <span style="background:#dc2626;color:#fff;padding:2px 8px;border-radius:10px">Down</span> · Position: <b>Neutral</b></p>
+            <p>Support: 1,089,000.00 · Pivot: 1,146,000.00 · Resistance: 1,653,000.00</p>
+            <p class="src">Sources — Social: DEMO fallback (seeded sample posts from headlines) · News: Google News RSS (Exa fallback — real headlines) · Price: real (yfinance)</p></div>
+<h2>How to read this</h2><p>Position = Long if the model predicts up AND sentiment is positive; Short if model predicts down AND sentiment is negative; otherwise Neutral. This is a research prototype, not financial advice.</p>
+</body></html>
