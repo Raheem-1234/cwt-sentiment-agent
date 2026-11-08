@@ -3,8 +3,8 @@
 **To:** gilad@crowdwisdomtrading.com
 **Subject:** CWT Intern Assignment — Sentiment Price Prediction Agent (Hang Seng + KRX) — Raheem Pathan
 
-> Before sending, replace the ONE placeholder: `[PASTE YOUR GITHUB REPO LINK HERE]`
-> (after uploading — see UPLOAD_GUIDE.md). Nothing else needs editing.
+> Before sending, replace the ONE placeholder: `https://github.com/Raheem-1234/cwt-sentiment-agent`
+> The repo is already live — nothing else needs editing.
 
 ---
 
@@ -12,7 +12,7 @@ Dear Gilad,
 
 I am submitting my completed assignment for the AI Agent Developer intern position — a Python sentiment pipeline that predicts an asset's price at n+1 from two sentiment sources, for 5 assets on the Hang Seng and 5 on KRX.
 
-**GitHub repository:** [PASTE YOUR GITHUB REPO LINK HERE]
+**GitHub repository:** https://github.com/Raheem-1234/cwt-sentiment-agent
 
 **What the pipeline does:**
 - Social sentiment: Apify X/Twitter search (actor IDs below); the code also runs with the StockTwits public API when no token is present
